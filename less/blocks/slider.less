@@ -1,4 +1,144 @@
 .slider {
-  min-height: 640px;
+  color: #fff;
   background-color: @blue-bg;
+}
+
+.slider__wrap {
+  width: 100%;
+  margin-top: auto;
+}
+
+.slider__item {
+  width: 970px;
+  height: 540px;
+  position: relative;
+  padding-left: 95px;
+  padding-right: 40px;
+  padding-bottom: 30px;
+  padding-top: 30px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  background-image: url(../img/ellipse.png);
+  background-repeat: no-repeat;
+  background-size: 492px 500px;
+  background-position: left bottom;
+}
+
+.slider__img {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  height: 415px;
+  width: 700px;
+  overflow: hidden;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-start;
+  
+  img {
+    display: block;
+    max-width: none;
+  }
+}
+
+.slider__title {
+  font-size: 24px;
+  font-weight: 600;
+  padding-bottom: 10px;
+  position: relative;
+  
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 70px;
+    height: 1px;
+    background-color: rgba(255, 255, 255, 0.4);
+  }
+}
+
+.slider__block {
+  max-width: 340px;
+}
+
+.slider__btn {
+  width: 197px;
+  height: 46px;
+  margin-top: 50px;
+  color: #fff;
+  font-weight: 600;
+  background-color: transparent;
+  border-radius: 5px;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  cursor: pointer;
+}
+
+.slide__thumb {
+  font-size: 16px;
+  font-weight: 600;
+  color: #6fc7f3;
+  text-align: center;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  cursor: pointer;
+}
+
+.gallery-top {
+  height: 80%;
+  width: 100%;
+}
+
+.gallery-thumbs {
+  height: 20%;
+  width: 910px;
+}
+
+.gallery-thumbs .swiper-slide {
+  height: 100%;
+}
+
+.gallery-thumbs .swiper-slide-active {
+  color: #fff;
+}
+
+.swiper-container-horizontal>.swiper-scrollbar {
+  top: 0;
+  bottom: auto;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 2px;
+  width: 1170px;
+}
+
+.swiper-scrollbar {
+  background-color: rgba(255, 255, 255, 0.18);
+}
+
+.swiper-scrollbar-drag {
+  background-color: rgb(255, 255, 255);
+}
+
+.slider__radio {
+  display: none;
+}
+
+.slider__label {
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 600;
+  color: #6fc7f3;
+  cursor: pointer;
+  
+  &:hover,
+  &:active {
+    color: #fff;
+  }
+}
+
+#tab-11:checked ~ .slider__label-11 {
+  color: #fff;
 }
