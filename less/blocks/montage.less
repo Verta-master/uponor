@@ -1,0 +1,146 @@
+.montage {
+  width: 100%;
+  position: relative;
+  
+  &::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 0;
+    width: 50%;
+    height: 100%;
+    background-color: #212121;
+    background-image: url(../img/bg-black.png);
+    background-repeat: repeat;
+    z-index: -1;
+  }
+  
+  &::after {
+    content: "";
+    position: absolute;
+    width: 31px;
+    height: 170px;
+    background-image: url(../img/shape-white.png);
+    background-repeat: no-repeat;
+    top: 50%;
+    left: 49.9%;
+    transform: translateY(-50%);
+  }
+}
+
+.montage__block {
+  width: 50%;
+  padding-top: 80px;
+  padding-bottom: 45px;
+  padding-left: 130px;
+  padding-right: 130px;
+  
+  &--bg {
+    padding-left: 110px;
+    padding-right: 110px;
+  }
+}
+
+.montage__wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.montage__title {
+  text-align: left;
+}
+
+.montage__title-white {
+  padding-bottom: 10px;
+  text-align: left;
+  color: #fff;
+  position: relative;
+  
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 70px;
+    height: 1px;
+    background-color: rgba(255, 255, 255, 0.3);
+  }
+}
+
+.montage__text {
+  color: #6d6d6d;
+}
+
+.montage__btn {
+  width: 305px;
+  height: 46px;
+  margin-top: 50px;
+  color: #000;
+  border: 2px solid #fff;
+  background-color: rgb(255, 255, 255);
+}
+
+.montage__img {
+  width: 350px;
+  height: 270px;
+  overflow: hidden;
+  
+  img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.montage__h3 {
+  padding-left: 45px;
+  
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 70px;
+    height: 1px;
+    background-color: rgb(242, 242, 242);
+  }
+  
+  &::before {
+    content: "";
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    background-image: url(../img/sprite.png);
+    background-repeat: no-repeat;
+  }
+}
+
+.montage__item {
+  margin-bottom: 40px;
+  
+  &:first-child {
+    .montage__h3::before {
+      width: 21px;
+      height: 21px;
+      background-position: -352px -5px;
+    }
+  }
+  
+  &:nth-child(2) {
+    .montage__h3::before {
+      width: 24px;
+      height: 16px;
+      background-position: -383px -5px;
+    }
+  }
+  
+  &:nth-child(3) {
+    .montage__h3::before {
+      width: 22px;
+      height: 22px;
+      background-position: -125px -5px;
+    }
+  }
+}
