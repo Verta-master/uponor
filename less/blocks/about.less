@@ -1,0 +1,68 @@
+.about {
+  padding-top: 80px;
+  padding-bottom: 100px;
+}
+
+.about__list {
+  width: 100%;
+  min-height: 170px;
+  padding: 40px 70px;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  border-radius: 85px;
+  box-shadow: 0px 3px 31.04px 0.96px rgba(0, 0, 0, 0.03);
+}
+
+.about__item {
+  max-width: 150px;
+  padding-top: 50px;
+  text-align: center;
+  position: relative;
+  
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background-image: url(../img/sprite.png);
+    background-repeat: no-repeat;
+  }
+  
+  &:first-child::before {
+    width: 29px;
+    height: 41px;
+    background-position: -541px -5px;
+  }
+  
+  &:nth-child(2)::before {
+    width: 41px;
+    height: 30px;
+    background-position: -580px -5px;
+  }
+  
+  &:nth-child(3)::before {
+    width: 17px;
+    height: 39px;
+    background-position: -451px -5px;
+  }
+  
+  &:nth-child(4)::before {
+    width: 36px;
+    height: 26px;
+    background-position: -230px -5px;
+  }
+  
+  &:nth-child(5)::before {
+    width: 37px;
+    height: 39px;
+    background-position: -157px -5px;
+  }
+  
+  &:nth-child(6)::before {
+    width: 38px;
+    height: 36px;
+    background-position: -276px -5px;
+  }
+}
