@@ -137,7 +137,66 @@
     </section>
     
     <section class="slider">
-      
+      <div class="swiper-container gallery-thumbs">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide slide__thumb">Отопление</div>
+          <div class="swiper-slide slide__thumb">Горячее водоснабжение</div>
+          <div class="swiper-slide slide__thumb">ХВС и напорная канализация</div>
+        </div>
+      </div>
+      <div class="swiper-container gallery-top">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide slider__item">
+            <input type="radio" name="slide-1" id="tab-11" class="slider__radio" checked>
+            <input type="radio" name="slide-1" id="tab-12" class="slider__radio">
+            <input type="radio" name="slide-1" id="tab-13" class="slider__radio">
+            <input type="radio" name="slide-1" id="tab-14" class="slider__radio">
+            <input type="radio" name="slide-1" id="tab-15" class="slider__radio">
+            <label for="tab-11" class="slider__label slider__label-11">Thermo Single</label>
+            <label for="tab-12" class="slider__label slider__label-12">Thermo Twin</label>
+            <label for="tab-13" class="slider__label slider__label-13">Varia Single</label>
+            <label for="tab-14" class="slider__label slider__label-14">Varia Twin</label>
+            <label for="tab-15" class="slider__label slider__label-15">Quattro</label>
+            <div class="slider__wrap">
+              <div class="slider__block">
+                <h3 class="slider__title">Ecoflex Thermo</h3>
+                <p class="slider__text">Ecoflex Thermo для тепло- и холодоснабжения: одна труба в кожухе - Thermo Single, две трубы в кожухе - Thermo Twin</p>
+                <button type="button" class="slider__btn">Рассчитать стоимость</button>
+              </div>
+              <figure class="slider__img">
+                <img src="img/ecoflex-thermo-quatro.png" alt="Ecoflex Thermo" width="694" height="858">
+              </figure>
+            </div>
+          </div>
+          <div class="swiper-slide slider__item">
+            <div class="slider__wrap">
+              <div class="slider__block">
+                <h3 class="slider__title">Ecoflex Thermo</h3>
+                <p class="slider__text">Ecoflex Thermo для тепло- и холодоснабжения: одна труба в кожухе - Thermo Single, две трубы в кожухе - Thermo Twin</p>
+                <button type="button" class="slider__btn">Рассчитать стоимость</button>
+              </div>
+              <figure class="slider__img">
+                <img src="img/ecoflex-thermo-twin.png" alt="Ecoflex Thermo" width="674" height="830">
+              </figure>
+            </div>
+          </div>
+          <div class="swiper-slide slider__item">
+            <div class="slider__wrap">
+              <div class="slider__block">
+                <h3 class="slider__title">Ecoflex Thermo</h3>
+                <p class="slider__text">Ecoflex Thermo для тепло- и холодоснабжения: одна труба в кожухе - Thermo Single, две трубы в кожухе - Thermo Twin</p>
+                <button type="button" class="slider__btn">Рассчитать стоимость</button>
+              </div>
+              <figure class="slider__img">
+                <img src="img/thermo-single.png" alt="Ecoflex Thermo" width="652" height="819">
+              </figure>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-scrollbar"></div>
+      </div>
     </section>
     
     <section class="service">
@@ -315,6 +374,9 @@
   
   <script src="js/jquery-3.2.1.min.js"></script>
   <script src="js/jquery.arcticmodal-0.3.min.js"></script>
+  <script src="js/swiper.min.js"></script>
+  
+<!-- Modal windows -->
   <script>
     $(".popup").click(function(){
       $(function(){
@@ -328,6 +390,32 @@
         });
       });
     });
+  </script>
+  
+<!-- Slider -->
+  <script>
+    var galleryTop = new Swiper('.gallery-top', {
+      loop: true,
+      slidesPerView: 'auto',
+      centeredSlides: true,
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+      scrollbar: {
+        el: '.swiper-scrollbar',
+      },
+    });
+    var galleryThumbs = new Swiper('.gallery-thumbs', {
+      loop: true,
+      slidesPerView: 3,
+      spaceBetween: 10,
+      centeredSlides: true,
+      touchRatio: 0.2,
+      slideToClickedSlide: true,
+    });
+    galleryTop.controller.control = galleryThumbs;
+    galleryThumbs.controller.control = galleryTop;
   </script>
 </body>
 </html>
