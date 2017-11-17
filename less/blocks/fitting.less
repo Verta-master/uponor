@@ -1,14 +1,15 @@
 .fitting {
   padding-top: 80px;
-  padding-bottom: 80px;
+  padding-bottom: 67px;
 }
 
 .fitting__info {
   text-align: center;
-  max-width: 950px;
+  max-width: 1000px;
   margin-left: auto;
   margin-right: auto;
-  margin-bottom: 80px;
+  margin-bottom: 85px;
+  margin-top: 22px;
 }
 
 .fitting__list {
@@ -35,15 +36,27 @@
 }
 
 .fitting__img {
+  display: block;
   box-shadow: 0px 3px 31.04px 0.96px rgba(0, 0, 0, 0.09);
 }
 
 .fitting__text {
   color: #7b7b7b;
   padding-left: 30px;
-  padding-right: 55px;
+  padding-right: 35px;
 }
 
 .fitting__title {
   padding-left: 30px;
+  margin-top: 10px;
+  
+  &::after {
+    content: "";
+    position: absolute;
+    left: 30px;
+    bottom: 0;
+    width: 70px;
+    height: 1px;
+    background-color: rgb(242, 242, 242);
+  }
 }

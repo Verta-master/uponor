@@ -3,23 +3,28 @@
   background-color: @blue-bg;
 }
 
-.slider__wrap {
+.slider__tab {
   width: 100%;
   margin-top: auto;
+  display: none;
+  
+  &--active {
+    display: block;
+  }
 }
 
 .slider__item {
   width: 970px;
-  height: 540px;
+  height: 545px;
   position: relative;
   padding-left: 95px;
   padding-right: 40px;
-  padding-bottom: 30px;
-  padding-top: 30px;
+  padding-bottom: 35px;
+  padding-top: 35px;
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: flex-start;
   background-image: url(../img/ellipse.png);
   background-repeat: no-repeat;
@@ -30,8 +35,8 @@
 .slider__img {
   position: absolute;
   bottom: 0;
-  right: 0;
-  height: 415px;
+  right: -70px;
+  height: 380px;
   width: 700px;
   overflow: hidden;
   display: flex;
@@ -53,8 +58,8 @@
   &::after {
     content: "";
     position: absolute;
-    left: 0;
-    bottom: 0;
+    left: 5px;
+    bottom: -8px;
     width: 70px;
     height: 1px;
     background-color: rgba(255, 255, 255, 0.4);
@@ -68,23 +73,35 @@
 .slider__btn {
   width: 197px;
   height: 46px;
-  margin-top: 50px;
+  margin-top: 45px;
   color: #fff;
   font-weight: 600;
   background-color: transparent;
   border-radius: 5px;
   border: 2px solid rgba(255, 255, 255, 0.2);
+  transition: ease-out 0.3s;
   cursor: pointer;
+  
+  &:hover,
+  &:active {
+    border-color: #fff;
+    transition: ease-out 0.3s;
+  }
 }
 
-.slide__thumb {
+.slider__thumb {
   font-size: 16px;
   font-weight: 600;
   color: #6fc7f3;
   text-align: center;
-  padding-top: 30px;
-  padding-bottom: 30px;
+  padding-top: 42px;
+  padding-bottom: 42px;
   cursor: pointer;
+  
+  &:hover,
+  &:active {
+    color: #fff;
+  }
 }
 
 .gallery-top {
@@ -111,7 +128,7 @@
   left: 50%;
   transform: translateX(-50%);
   height: 2px;
-  width: 1170px;
+  width: 910px;
 }
 
 .swiper-scrollbar {
@@ -119,26 +136,24 @@
 }
 
 .swiper-scrollbar-drag {
+  width: 146px !important;
   background-color: rgb(255, 255, 255);
 }
 
-.slider__radio {
-  display: none;
-}
-
 .slider__label {
+  display: block;
+  margin: 0;
   font-size: 16px;
   line-height: 24px;
   font-weight: 600;
   color: #6fc7f3;
   cursor: pointer;
   
+  &--active,
   &:hover,
   &:active {
     color: #fff;
   }
 }
 
-#tab-11:checked ~ .slider__label-11 {
-  color: #fff;
-}
+

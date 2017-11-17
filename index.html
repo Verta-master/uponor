@@ -27,7 +27,7 @@
               <h1 class="title-h1">Uponor Ecoflex</h1>
               <p class="promo__text">Теплоизолированные трубы для наружных сетей теплоснобжения, водоснабжения и напорной канализации</p>
               <div class="promo__btn-wrap">
-                <button class="btn">Рассчитать стоимость</button>
+                <button class="btn popup">Рассчитать стоимость</button>
                 <a href="#" class="promo__link">Виды труб Ecoflex</a>
               </div>
             </div>
@@ -73,17 +73,17 @@
         <ul class="counter__list">
           <li class="counter__item">
             <b class="counter__value">45</b>
-            <span>лет</span>
+            <span> лет</span>
             <p>производства труб</p>
           </li>
           <li class="counter__item">
             <b class="counter__value">3</b>
-            <span>млрд</span>
+            <span> млрд</span>
             <p>метров труб произведено</p>
           </li>
           <li class="counter__item">
             <b class="counter__value">39</b>
-            <span>стран</span>
+            <span> стран</span>
             <p>пользуется нашими продуктами</p>
           </li>
         </ul>
@@ -109,7 +109,7 @@
           <p class="benefits__text">Трубы теплоснабжения имеют антидиффузионный слой от проникновения кислорода EVON (сополимер этилена и винилового спирта) для предотвращения коррозии элементов системы и соответствуют требованиям ISO 17455 по кислородопроницаемости</p>
           <h3 class="title-h3 benefits__title benefits__title--markup">Цветная маркировка</h3>
           <p class="benefits__text">Двухцветная серцевина теплоизоляции существенно упрощает монтаж и исключает ошибки подключения</p>
-          <button class="btn">Узнать подробнее</button>
+          <button class="btn benefits__btn">Узнать подробнее</button>
         </div>
         <figure class="benefits__img">
           <img src="img/tube.png" alt="Преимущества" width="1050" height="708">
@@ -139,41 +139,37 @@
     <section class="slider">
       <div class="swiper-container gallery-thumbs">
         <div class="swiper-wrapper">
-          <div class="swiper-slide slide__thumb">Отопление</div>
-          <div class="swiper-slide slide__thumb">Горячее водоснабжение</div>
-          <div class="swiper-slide slide__thumb">ХВС и напорная канализация</div>
+          <div class="swiper-slide slider__thumb">Отопление</div>
+          <div class="swiper-slide slider__thumb">Горячее водоснабжение</div>
+          <div class="swiper-slide slider__thumb">ХВС и напорная канализация</div>
         </div>
       </div>
       <div class="swiper-container gallery-top">
         <div class="swiper-wrapper">
           <div class="swiper-slide slider__item">
-            <input type="radio" name="slide-1" id="tab-11" class="slider__radio" checked>
-            <input type="radio" name="slide-1" id="tab-12" class="slider__radio">
-            <input type="radio" name="slide-1" id="tab-13" class="slider__radio">
-            <input type="radio" name="slide-1" id="tab-14" class="slider__radio">
-            <input type="radio" name="slide-1" id="tab-15" class="slider__radio">
-            <label for="tab-11" class="slider__label slider__label-11">Thermo Single</label>
-            <label for="tab-12" class="slider__label slider__label-12">Thermo Twin</label>
-            <label for="tab-13" class="slider__label slider__label-13">Varia Single</label>
-            <label for="tab-14" class="slider__label slider__label-14">Varia Twin</label>
-            <label for="tab-15" class="slider__label slider__label-15">Quattro</label>
-            <div class="slider__wrap">
+            <p class="slider__label slider__label-11 slider__label--active">Thermo Single</p>
+            <p for="tab-12" class="slider__label slider__label-12">Thermo Twin</p>
+            <p for="tab-13" class="slider__label slider__label-13">Varia Single</p>
+            <p for="tab-14" class="slider__label slider__label-14">Varia Twin</p>
+            <p for="tab-15" class="slider__label slider__label-15">Quattro</p>
+            <div class="slider__tab slider__tab--active">
               <div class="slider__block">
                 <h3 class="slider__title">Ecoflex Thermo</h3>
                 <p class="slider__text">Ecoflex Thermo для тепло- и холодоснабжения: одна труба в кожухе - Thermo Single, две трубы в кожухе - Thermo Twin</p>
-                <button type="button" class="slider__btn">Рассчитать стоимость</button>
+                <button type="button" class="slider__btn popup">Рассчитать стоимость</button>
               </div>
               <figure class="slider__img">
                 <img src="img/ecoflex-thermo-quatro.png" alt="Ecoflex Thermo" width="694" height="858">
               </figure>
             </div>
+            
           </div>
           <div class="swiper-slide slider__item">
-            <div class="slider__wrap">
+            <div class="slider__tab slider__tab--active">
               <div class="slider__block">
                 <h3 class="slider__title">Ecoflex Thermo</h3>
                 <p class="slider__text">Ecoflex Thermo для тепло- и холодоснабжения: одна труба в кожухе - Thermo Single, две трубы в кожухе - Thermo Twin</p>
-                <button type="button" class="slider__btn">Рассчитать стоимость</button>
+                <button type="button" class="slider__btn popup">Рассчитать стоимость</button>
               </div>
               <figure class="slider__img">
                 <img src="img/ecoflex-thermo-twin.png" alt="Ecoflex Thermo" width="674" height="830">
@@ -181,11 +177,11 @@
             </div>
           </div>
           <div class="swiper-slide slider__item">
-            <div class="slider__wrap">
+            <div class="slider__tab slider__tab--active">
               <div class="slider__block">
                 <h3 class="slider__title">Ecoflex Thermo</h3>
                 <p class="slider__text">Ecoflex Thermo для тепло- и холодоснабжения: одна труба в кожухе - Thermo Single, две трубы в кожухе - Thermo Twin</p>
-                <button type="button" class="slider__btn">Рассчитать стоимость</button>
+                <button type="button" class="slider__btn popup">Рассчитать стоимость</button>
               </div>
               <figure class="slider__img">
                 <img src="img/thermo-single.png" alt="Ecoflex Thermo" width="652" height="819">
@@ -213,7 +209,9 @@
         </div>
         <span class="service__comment">*Полимерные теплоизолированные трубы Uponor Aqua, Thermo, Varia и Quattro при режимах  эксплуатации, не рассчитанных на полный срок службы труб в 50 лет, могут работать со следующими максимальными постоянными значениями температуры и давления воды (из DIN 16893, коэффициент надежности 1,5):</span>
       </div>
-      <img src="img/term.png" alt="Срок службы" class="service__img" width="624" height="551">
+      <figure class="service__img">
+        <img src="img/term.png" alt="Срок службы" width="624" height="551">
+      </figure>
     </section>
     
     <section class="montage">
@@ -269,7 +267,7 @@
         <li class="fitting__item">
           <img src="img/step-1.jpg" alt="Монтаж с фитингами" class="fitting__img" width="393" height="291">
           <h3 class="title-h3 fitting__title"><span>3.</span> Этап</h3>
-          <p class="fitting__text">Без задержек наденьте расширенную трубу на штуцер фитинга до упора. Держите трубу<br>до тех пор, пока она не обожмет фитинг.<br>Готово!</p>
+          <p class="fitting__text">Без задержек наденьте расширенную трубу на штуцер фитинга до упора. Держите трубу до тех пор, пока она не обожмет фитинг.<br>Готово!</p>
         </li>
       </ul>
     </section>
@@ -360,7 +358,7 @@
         <input type="tel" name="modal" id="phone-modal" class="modal__input" placeholder="Телефон" required>
         <input type="email" name="modal" id="email-modal" class="modal__input" placeholder="Почта">
         <p class="modal__text">Нажатием кнопки «Отправить» я даю свое согласие на обработку персональных данных в&nbsp;соответствии с <a href="#">Политикой конфиденциальности</a></p>
-        <button type="submit" class="btn btn--blue">Отправить</button>
+        <button type="submit" class="btn">Отправить</button>
       </form>
       <button type="button" class="modal__close arcticmodal-close"></button>
     </div>
@@ -416,6 +414,15 @@
     });
     galleryTop.controller.control = galleryThumbs;
     galleryThumbs.controller.control = galleryTop;
+    
+    $(function() {
+      $(".slider__label").click(function() {
+        $('.slider__label').each(function(index) {
+          $(this).removeClass('slider__label--active');
+        });
+        $(this).addClass('slider__label--active');
+      })
+    });
   </script>
 </body>
 </html>

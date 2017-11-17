@@ -5,8 +5,10 @@
 
 .about__list {
   width: 100%;
-  min-height: 170px;
-  padding: 40px 70px;
+  height: 170px;
+  margin-top: 40px;
+  padding: 0 85px;
+  padding-top: 45px;
   display: flex;
   justify-content: space-between;
   align-items: baseline;
@@ -15,7 +17,7 @@
 }
 
 .about__item {
-  max-width: 150px;
+  max-width: 160px;
   padding-top: 50px;
   text-align: center;
   position: relative;
@@ -36,10 +38,14 @@
     background-position: -541px -5px;
   }
   
-  &:nth-child(2)::before {
-    width: 41px;
-    height: 30px;
-    background-position: -580px -5px;
+  &:nth-child(2) {
+    padding-left: 20px;
+    
+    &::before {
+      width: 41px;
+      height: 30px;
+      background-position: -580px -5px;
+    }
   }
   
   &:nth-child(3)::before {
@@ -48,10 +54,12 @@
     background-position: -451px -5px;
   }
   
-  &:nth-child(4)::before {
-    width: 36px;
-    height: 26px;
-    background-position: -230px -5px;
+  &:nth-child(4) {    
+    &::before {
+      width: 36px;
+      height: 26px;
+      background-position: -230px -5px;
+    }
   }
   
   &:nth-child(5)::before {
