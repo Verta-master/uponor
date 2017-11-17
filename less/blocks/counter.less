@@ -29,6 +29,12 @@
   align-items: center;
 }
 
+.counter__value {
+  display: block;
+  font-size: 57px;
+  width: 80px;
+}
+
 .counter__item {
   color: #fff;
   line-height: 1;
@@ -50,9 +56,15 @@
   
   &:nth-child(2) {
     margin-right: 30px;
+    
+    .counter__value {
+      width: 40px;
+    }
   }
 }
 
-.counter__value {
-  font-size: 57px;
+.counter__field {
+  display: flex;
+  justify-content: flex-start;
+  align-items: baseline;
 }
