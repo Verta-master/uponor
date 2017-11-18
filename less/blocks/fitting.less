@@ -13,7 +13,7 @@
 }
 
 .fitting__list {
-  padding: 0 30px;
+  padding: 0 15px;
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
@@ -21,6 +21,10 @@
 
 .fitting__item {
   width: 33%;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-top: 15px;
+  overflow: hidden;
   
   &:first-child {
     .fitting__img {
@@ -36,8 +40,12 @@
 }
 
 .fitting__img {
-  display: block;
+  overflow: hidden;
   box-shadow: 0px 3px 31.04px 0.96px rgba(0, 0, 0, 0.09);
+  
+  img {
+    display: block;
+  }
 }
 
 .fitting__text {
