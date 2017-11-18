@@ -10,8 +10,9 @@
     width: 50%;
     height: 100%;
     background-color: #212121;
-    background-image: url(../img/bg-black.png);
-    background-repeat: repeat;
+    background-image: url(../img/pattern.png);
+    background-repeat: no-repeat;
+    background-size: cover;
     z-index: -1;
   }
   
@@ -80,6 +81,11 @@
   color: #000;
   border: 2px solid #fff;
   background-color: rgb(255, 255, 255);
+  
+  &:hover,
+  &:active {
+    background-color: rgb(255, 255, 255);
+  }
 }
 
 .montage__img {
