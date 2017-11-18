@@ -927,12 +927,13 @@ main {
   max-width: 380px;
 }
 .info__title {
+  position: relative;
   text-align: center;
 }
 .info__title::after {
   content: "";
   position: absolute;
-  bottom: 0;
+  bottom: -7px;
   left: 50%;
   transform: translateX(-50%);
   width: 70px;
@@ -1193,8 +1194,9 @@ main {
   padding-top: 63px;
   position: relative;
   background-color: #212121;
-  background-image: url(../img/bg-black.png);
-  background-repeat: repeat;
+  background-image: url(../img/pattern.png);
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 .test::before {
   content: "";
@@ -1265,6 +1267,10 @@ main {
   border: 1px solid #000;
   background-color: #ffffff;
   box-shadow: 0px 2px 4.7px 0.3px rgba(0, 0, 0, 0.18);
+}
+.test__btn:hover,
+.test__btn:active {
+  background-color: #ffffff;
 }
 /**
  * Swiper 4.0.6
@@ -1823,7 +1829,7 @@ button.swiper-pagination-bullet {
 .slider__title::after {
   content: "";
   position: absolute;
-  left: 5px;
+  left: 0;
   bottom: -8px;
   width: 70px;
   height: 1px;
@@ -1849,6 +1855,8 @@ button.swiper-pagination-bullet {
 .slider__btn:hover,
 .slider__btn:active {
   border-color: #fff;
+  background-color: #fff;
+  color: #127ec7;
   transition: ease-out 0.3s;
 }
 .slider__thumb {
@@ -1984,18 +1992,10 @@ button.swiper-pagination-bullet {
   padding-top: 80px;
   padding-bottom: 30px;
   position: relative;
-  background-image: linear-gradient(to top, #e7e7e5 0%, #f1f0ee 49%, #e3e3e1 100%);
-}
-.service__img {
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 50%;
-  height: 551px;
-  max-height: 100%;
-  text-align: right;
-  overflow: hidden;
-  z-index: 0;
+  background-image: url(../img/term.jpg);
+  background-repeat: no-repeat;
+  background-position: right top;
+  background-size: cover;
 }
 .service__block {
   width: 340px;
@@ -2014,7 +2014,7 @@ button.swiper-pagination-bullet {
 .service__title::after {
   content: "";
   position: absolute;
-  left: 0;
+  left: 130px;
   bottom: 0;
   width: 70px;
   height: 1px;
@@ -2053,8 +2053,9 @@ button.swiper-pagination-bullet {
   width: 50%;
   height: 100%;
   background-color: #212121;
-  background-image: url(../img/bg-black.png);
-  background-repeat: repeat;
+  background-image: url(../img/pattern.png);
+  background-repeat: no-repeat;
+  background-size: cover;
   z-index: -1;
 }
 .montage::after {
@@ -2115,6 +2116,10 @@ button.swiper-pagination-bullet {
   margin-top: 55px;
   color: #000;
   border: 2px solid #fff;
+  background-color: #ffffff;
+}
+.montage__btn:hover,
+.montage__btn:active {
   background-color: #ffffff;
 }
 .montage__img {
@@ -2469,36 +2474,16 @@ button.swiper-pagination-bullet {
   .service__block {
     padding-left: 30px;
     margin-left: 0;
-    width: 100%;
-    padding-right: 30px;
   }
   .service__comment,
   .service__title {
     padding-left: 30px;
   }
+  .service__comment {
+    max-width: 350px;
+  }
   .service__title::after {
     left: 30px;
-  }
-  .service {
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-direction: column;
-        flex-direction: column;
-    -ms-flex-pack: start;
-        justify-content: flex-start;
-    -ms-flex-align: start;
-        align-items: flex-start;
-    padding-top: 0;
-  }
-  .service .wrapper {
-    -ms-flex-order: 2;
-        order: 2;
-  }
-  .service__img {
-    -ms-flex-order: 1;
-        order: 1;
-    position: relative;
-    width: 100%;
   }
   .montage__wrap {
     display: block;
@@ -2554,6 +2539,13 @@ button.swiper-pagination-bullet {
   }
   .slider__img img {
     max-width: 75%;
+  }
+  .service {
+    background-size: 150% 100%;
+    padding-top: 40px;
+  }
+  .service__block {
+    width: 70%;
   }
 }
 @media (max-width: 767px) {
@@ -2685,10 +2677,6 @@ button.swiper-pagination-bullet {
   .benefits__circle--2 {
     left: 250px;
   }
-  .service__img {
-    height: 424px;
-    margin-bottom: 20px;
-  }
   .fitting__info {
     margin-bottom: 40px;
   }
@@ -2717,6 +2705,9 @@ button.swiper-pagination-bullet {
     min-height: 36px;
     padding-top: 30px;
     padding-bottom: 30px;
+  }
+  .service {
+    background-image: linear-gradient(to top, #e7e7e5 0%, #f1f0ee 49%, #e3e3e1 100%);
   }
 }
 @media (max-width: 479px) {
@@ -2826,8 +2817,8 @@ button.swiper-pagination-bullet {
   .test__block {
     padding-bottom: 40px;
   }
-  .service__img {
-    height: auto;
+  .service__title::after {
+    left: 0;
   }
   .montage__img {
     width: 100%;
