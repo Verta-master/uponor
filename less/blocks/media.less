@@ -148,11 +148,7 @@
   .swiper-container-rtl .swiper-button-prev {
     right: 10px;
   }
-  
-  .swiper-container-horizontal>.swiper-scrollbar {
-    width: 100%;
-  }
-  
+
   .service__block {
     padding-left: 30px;
     margin-left: 0;
@@ -244,6 +240,15 @@
   .promo__block-wrap {
     top: 0;
     right: 260px;
+  }
+  
+  .slider__img {
+    width: 100%;
+    bottom: -100px;
+    
+    img {
+      max-width: 75%;
+    }
   }
 }
 
@@ -436,6 +441,17 @@
   .promo__title {
     top: 10px;
   }
+  
+  .swiper-button-prev,
+  .swiper-button-next {
+    top: 25%;
+  }
+  
+  .gallery-thumbs .swiper-slide {
+    min-height: 36px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
 }
 
 //-----------Mobile-360----------------------------------------------
@@ -594,6 +610,12 @@
   
   .slider__thumb {
     font-size: 12px;
+  }
+  
+  .gallery-thumbs .swiper-slide {
+    min-height: 54px;
+    padding-top: 15px;
+    padding-bottom: 15px;
   }
 }
 
