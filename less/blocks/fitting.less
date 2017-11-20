@@ -24,22 +24,11 @@
   padding-left: 15px;
   padding-right: 15px;
   padding-top: 15px;
-  overflow: hidden;
-  
-  &:first-child {
-    .fitting__img {
-      border-radius: 10px 0 0 10px;
-    }
-  }
-  
-  &:nth-child(3) {
-    .fitting__img {
-      border-radius: 0 10px 10px 0;
-    }
-  }
+  overflow: hidden;  
 }
 
 .fitting__img {
+  border-radius: 10px;
   overflow: hidden;
   box-shadow: 0px 3px 31.04px 0.96px rgba(0, 0, 0, 0.09);
   
@@ -63,6 +52,21 @@
     position: absolute;
     left: 30px;
     bottom: 0;
+    width: 70px;
+    height: 1px;
+    background-color: rgb(242, 242, 242);
+  }
+}
+
+.fitting__h2 {
+  position: relative;
+  
+  &::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -8px;
     width: 70px;
     height: 1px;
     background-color: rgb(242, 242, 242);
