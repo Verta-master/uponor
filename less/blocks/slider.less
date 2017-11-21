@@ -1,37 +1,98 @@
 .slider {
   color: #fff;
   background-color: @blue-bg;
+  position: relative;
+  min-height: 630px;
 }
 
-.slider__tab {
-  width: 100%;
-  margin-top: auto;
+.slider__input {
   display: none;
+}
+
+.slider__top {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
   
-  &--active {
-    display: block;
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: ~"calc(100% - 60px)";
+    height: 2px;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.18);
+  }
+}
+
+.slider__thumb {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+  font-weight: 600;
+  color: #6fc7f3;
+  text-align: center;
+  cursor: pointer;
+  padding: 42px 0;
+  width: 33%;
+  
+  &:hover,
+  &:active {
+    color: #fff;
+  }
+  
+  span {
+    padding: 0 30px;
+    position: relative;
+    
+    &::after {
+      content: "";
+      display: none;
+      position: absolute;
+      bottom: -42px;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      border-bottom: 2px solid #fff;
+    }
   }
 }
 
 .slider__item {
-  width: 970px;
+  opacity: 0;
+  width: 100%;
   height: 545px;
-  position: relative;
-  padding-left: 95px;
-  padding-right: 40px;
+  position: absolute;
+  top: 84px;
+  left: 0;
   padding-top: 35px;
-  box-sizing: border-box;
-  
   background-image: url(../img/ellipse.png);
   background-repeat: no-repeat;
   background-size: 492px 500px;
   background-position: left bottom;
+  box-sizing: border-box;
+}
+
+#tab-3:checked ~ .slider__top .slider__thumb--3,
+#tab-2:checked ~ .slider__top .slider__thumb--2,
+#tab-1:checked ~ .slider__top .slider__thumb--1 {
+  color: #fff;
+
+  span::after {
+    display: block;
+  }
+}
+
+#tab-3:checked ~ .slider__item--3,
+#tab-2:checked ~ .slider__item--2,
+#tab-1:checked ~ .slider__item--1 {
+  opacity: 1;
 }
 
 .slider__img {
-  position: absolute;
-  bottom: 0;
-  right: -115px;
   height: 380px;
   width: 700px;
   overflow: hidden;
@@ -66,6 +127,7 @@
 
 .slider__block {
   max-width: 340px;
+  padding-bottom: 30px;
   position: relative;
   z-index: 10;
 }
@@ -91,15 +153,13 @@
   }
 }
 
-.slider__thumb {
+.slider__label {
   font-size: 16px;
+  line-height: 24px;
   font-weight: 600;
   color: #6fc7f3;
-  text-align: center;
-  padding-top: 42px;
-  padding-bottom: 42px;
   cursor: pointer;
-  width: 33%;
+  text-align: center;
   
   &:hover,
   &:active {
@@ -108,124 +168,29 @@
 }
 
 .gallery-top {
-  height: 80%;
+  height: 90%;
   width: 100%;
 }
 
 .gallery-thumbs {
-  height: 20%;
-  width: 910px;
-}
-
-.gallery-thumbs .swiper-slide {
-  height: 100%;
-  border-bottom: 2px solid rgba(255, 255, 255, 0.18);
+  height: 10%;
+  width: 1170px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .gallery-thumbs .swiper-slide-active {
   color: #fff;
-  border-bottom: 2px solid #fff;
 }
 
-.slider__label {
-  display: block;
-  margin: 0;
-  font-size: 16px;
-  line-height: 24px;
-  font-weight: 600;
-  color: #6fc7f3;
-  cursor: pointer;
-  
-  &:hover,
-  &:active {
-    color: #fff;
-  }
-}
-
-.slider__form {
-  pointer-events: all !important;
-  position: relative;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: flex-start;
-}
-
-.slider__control {
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 0;
-}
-
-.slider__radio {
-  display: block;
-  width: 150px;
-  height: 25px;
-  cursor: pointer;
-  position: relative;
-  z-index: 5;
-  opacity: 0;
+.gallery-thumbs--1 .slider__label {
+  width: 20% !important;
 }
 
 .slider__tab {
-  display: none;
-  margin-top: auto;
-  padding-bottom: 35px;
-}
-
-#tab-35:checked ~ .slider__control .slider__label--35,
-#tab-34:checked ~ .slider__control .slider__label--34,
-#tab-33:checked ~ .slider__control .slider__label--33,
-#tab-32:checked ~ .slider__control .slider__label--32,
-#tab-31:checked ~ .slider__control .slider__label--31,
-#tab-25:checked ~ .slider__control .slider__label--25,
-#tab-24:checked ~ .slider__control .slider__label--24,
-#tab-23:checked ~ .slider__control .slider__label--23,
-#tab-22:checked ~ .slider__control .slider__label--22,
-#tab-21:checked ~ .slider__control .slider__label--21,
-#tab-15:checked ~ .slider__control .slider__label--15,
-#tab-14:checked ~ .slider__control .slider__label--14,
-#tab-13:checked ~ .slider__control .slider__label--13,
-#tab-12:checked ~ .slider__control .slider__label--12,
-#tab-11:checked ~ .slider__control .slider__label--11 {
-  color: #fff;
-}
-
-#tab-35:hover ~ .slider__control .slider__label--35,
-#tab-34:hover ~ .slider__control .slider__label--34,
-#tab-33:hover ~ .slider__control .slider__label--33,
-#tab-32:hover ~ .slider__control .slider__label--32,
-#tab-31:hover ~ .slider__control .slider__label--31,
-#tab-25:hover ~ .slider__control .slider__label--25,
-#tab-24:hover ~ .slider__control .slider__label--24,
-#tab-23:hover ~ .slider__control .slider__label--23,
-#tab-22:hover ~ .slider__control .slider__label--22,
-#tab-21:hover ~ .slider__control .slider__label--21,
-#tab-15:hover ~ .slider__control .slider__label--15,
-#tab-14:hover ~ .slider__control .slider__label--14,
-#tab-13:hover ~ .slider__control .slider__label--13,
-#tab-12:hover ~ .slider__control .slider__label--12,
-#tab-11:hover ~ .slider__control .slider__label--11 {
-  color: #fff;
-}
-
-#tab-35:checked ~ .slider__tab--35,
-#tab-34:checked ~ .slider__tab--34,
-#tab-33:checked ~ .slider__tab--33,
-#tab-32:checked ~ .slider__tab--32,
-#tab-31:checked ~ .slider__tab--31,
-#tab-25:checked ~ .slider__tab--25,
-#tab-24:checked ~ .slider__tab--24,
-#tab-23:checked ~ .slider__tab--23,
-#tab-22:checked ~ .slider__tab--22,
-#tab-21:checked ~ .slider__tab--21,
-#tab-15:checked ~ .slider__tab--15,
-#tab-14:checked ~ .slider__tab--14,
-#tab-13:checked ~ .slider__tab--13,
-#tab-12:checked ~ .slider__tab--12,
-#tab-11:checked ~ .slider__tab--11 {
-  display: block;
+  box-sizing: border-box;
+  padding-left: 150px;
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-end;
 }
