@@ -2,7 +2,8 @@
 var galleryTop1 = new Swiper('.gallery-top--1', {
   loop: true,
   loopedSlides: $(".gallery-top--1 .swiper-wrapper .swiper-slide").length,
-  slidesPerView: 1,
+  slidesPerView: 'auto',
+  centeredSlides: true,
   observer: true,
   observeParents: true,
   navigation: {
@@ -29,7 +30,8 @@ galleryThumbs1.controller.control = galleryTop1;
 var galleryTop2 = new Swiper('.gallery-top--2', {
   loop: true,
   loopedSlides: $(".gallery-top--2 .swiper-wrapper .swiper-slide").length,
-  slidesPerView: 1,
+  slidesPerView: 'auto',
+  centeredSlides: true,
   observer: true,
   observeParents: true,
   navigation: {
@@ -56,7 +58,8 @@ galleryThumbs2.controller.control = galleryTop2;
 var galleryTop3 = new Swiper('.gallery-top--3', {
   loop: true,
   loopedSlides: $(".gallery-top--3 .swiper-wrapper .swiper-slide").length,
-  slidesPerView: 1,
+  slidesPerView: 'auto',
+  centeredSlides: true,
   observer: true,
   observeParents: true,
   navigation: {

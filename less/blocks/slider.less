@@ -69,10 +69,6 @@
   top: 84px;
   left: 0;
   padding-top: 35px;
-  background-image: url(../img/ellipse.png);
-  background-repeat: no-repeat;
-  background-size: 492px 500px;
-  background-position: left bottom;
   box-sizing: border-box;
 }
 
@@ -93,6 +89,9 @@
 }
 
 .slider__img {
+  position: absolute;
+  bottom: 0;
+  right: -50px;
   height: 380px;
   width: 700px;
   overflow: hidden;
@@ -174,9 +173,14 @@
 
 .gallery-thumbs {
   height: 10%;
-  width: 1170px;
+  width: 900px;
   margin-left: auto;
   margin-right: auto;
+  
+  &--2,
+  &--3 {
+    width: 700px;
+  }
 }
 
 .gallery-thumbs .swiper-slide-active {
@@ -188,9 +192,17 @@
 }
 
 .slider__tab {
+  padding-left: 80px;
   box-sizing: border-box;
-  padding-left: 150px;
   display: flex;
-  justify-content: space-around;
+  justify-content: flex-start;
   align-items: flex-end;
+  background-image: url(../img/ellipse.png);
+  background-repeat: no-repeat;
+  background-size: 492px 500px;
+  background-position: left -100px bottom;
+}
+
+.gallery-top .swiper-wrapper .swiper-slide {
+  width: 975px;
 }
