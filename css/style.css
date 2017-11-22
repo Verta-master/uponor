@@ -1422,14 +1422,14 @@ main {
 .swiper-button-prev,
 .swiper-container-rtl .swiper-button-next {
   background-image: url(../img/arrow-prev.png);
-  left: 20%;
+  left: 21.5%;
   right: auto;
 }
 .swiper-button-next,
 .swiper-container-rtl .swiper-button-prev {
   background-image: url(../img/arrow-prev.png);
   transform: rotate(180deg);
-  right: 25%;
+  right: 24%;
   left: auto;
 }
 .swiper-button-prev.swiper-button-white,
