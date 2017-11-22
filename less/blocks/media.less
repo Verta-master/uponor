@@ -1,10 +1,30 @@
-@media (max-width: 1400px) {
+@media (max-width: 1650px) {
   .swiper-button-prev {
-    left: 10%;
+    left: 17%;
   }
   
   .swiper-button-next {
-    right: 10%;
+    right: 22%;
+  }
+}
+
+@media (max-width: 1500px) {
+  .swiper-button-prev {
+    left: 12%;
+  }
+  
+  .swiper-button-next {
+    right: 17%;
+  }
+}
+
+@media (max-width: 1300px) {
+  .swiper-button-prev {
+    left: 7%;
+  }
+  
+  .swiper-button-next {
+    right: 12%;
   }
 }
 
@@ -111,18 +131,6 @@
   
   .benefits .title-h2 {
     padding-left: 30px;
-  }
-  
-  .benefits__circle--1 {
-    top: 300px;
-  }
-  
-  .benefits__circle--3 {
-    top: 125px;
-  }
-  
-  .benefits__circle--4 {
-    top: 190px;
   }
   
   .test__img {
@@ -234,8 +242,12 @@
     width: 100%;
   }
   
-  .slider__thumb span {
-    min-height: 36px;
+  .slider__thumb {
+    min-height: 120px;
+    
+    &::after {
+      width: 100%;
+    }
   }
   
   .slider__item {
@@ -287,25 +299,6 @@
   .modal-video iframe {
     width: 560px;
     height: 315px;
-  }
-  
-  .benefits__circle--1 {
-    top: 210px;
-    left: 280px;
-  }
-  
-  .benefits__circle--3 {
-    top: 85px;
-    left: 110px;
-  }
-  
-  .benefits__circle--2 {
-    left: 420px;
-  }
-  
-  .benefits__circle--4 {
-    top: 125px;
-    left: 250px;
   }
   
   .about__list {
@@ -460,25 +453,6 @@
     font-size: 24px;
   }
   
-  .benefits__circle--3 {
-    top: 60px;
-    left: 80px;
-  }
-  
-  .benefits__circle--4 {
-    top: 95px;
-    left: 200px;
-  }
-  
-  .benefits__circle--1 {
-    top: 160px;
-    left: 240px;
-  }
-  
-  .benefits__circle--2 {
-    left: 350px;
-  }
-  
   .fitting__info {
     margin-bottom: 40px;
   }
@@ -547,14 +521,7 @@
     font-size: 14px;
     padding-top: 30px;
     padding-bottom: 30px;
-    
-    span {
-      min-height: 54px;
-      
-      &::after {
-        bottom: -30px;
-      }
-    }
+    min-height: 114px;
   }
   
   .slider__label {
@@ -762,15 +729,22 @@
     left: 0;
   }
   
-  .slider__thumb,
-  .slider__label {
-    font-size: 12px;
-    line-height: 1;
+  .gallery-thumbs--2,
+  .gallery-thumbs--3 {
+    width: 65%;
+    margin-left: auto;
+    margin-right: auto;
   }
   
-  .slider__thumb span {
+  .slider__label {
+    line-height: 1.1;
+  }
+  
+  .slider__thumb {
     padding-left: 10px;
     padding-right: 10px;
+    font-size: 10px;
+    line-height: 1.1;
   }
   
   .slider__tab {
