@@ -657,12 +657,13 @@ main {
   font-size: 10px;
   line-height: 16px;
   color: #b8b8b8;
+  margin-bottom: 10px;
 }
 .modal__text a {
   display: block;
   font-size: 13px;
   font-weight: 600;
-  line-height: 30px;
+  line-height: 20px;
   color: #127ec7;
   text-decoration: underline;
 }
@@ -682,6 +683,8 @@ main {
   border-radius: 15px;
   width: 182px;
   height: 31px;
+  margin-left: auto;
+  margin-right: auto;
 }
 .modal-done {
   display: -ms-flexbox;
@@ -1055,7 +1058,7 @@ main {
   content: "";
   position: absolute;
   left: 0;
-  bottom: 0;
+  bottom: -4px;
   width: 70px;
   height: 1px;
   background-color: #f2f2f2;
@@ -1244,7 +1247,7 @@ main {
   content: "";
   position: absolute;
   left: 0;
-  bottom: 0;
+  bottom: -2px;
   width: 70px;
   height: 1px;
   background-color: rgba(255, 255, 255, 0.3);
@@ -1420,14 +1423,14 @@ main {
 .swiper-button-prev,
 .swiper-container-rtl .swiper-button-next {
   background-image: url(../img/arrow-prev.png);
-  left: 18%;
+  left: 20%;
   right: auto;
 }
 .swiper-button-next,
 .swiper-container-rtl .swiper-button-prev {
   background-image: url(../img/arrow-prev.png);
   transform: rotate(180deg);
-  right: 18%;
+  right: 20%;
   left: auto;
 }
 .swiper-button-prev.swiper-button-white,
@@ -2125,6 +2128,13 @@ button.swiper-pagination-bullet {
   display: block;
   margin-left: auto;
   margin-right: auto;
+  position: relative;
+}
+.montage__img img:first-child {
+  z-index: 1;
+}
+.montage__img img:nth-child(2) {
+  z-index: 0;
 }
 .montage__shadow {
   margin-top: -70px;
@@ -2136,7 +2146,7 @@ button.swiper-pagination-bullet {
   content: "";
   position: absolute;
   left: 0;
-  bottom: -7px;
+  bottom: -5px;
   width: 70px;
   height: 1px;
   background-color: #f2f2f2;
@@ -2346,12 +2356,6 @@ button.swiper-pagination-bullet {
 .tools__btn {
   width: 168px;
   margin-top: auto;
-}
-.contacts iframe {
-  display: block;
-  border: none;
-  width: 100%;
-  height: 600px;
 }
 @media (max-width: 1400px) {
   .swiper-button-prev {
@@ -2768,7 +2772,7 @@ button.swiper-pagination-bullet {
     margin-bottom: 50px;
   }
   .promo__title {
-    top: 10px;
+    top: 50px;
   }
   .service {
     padding-top: 0;
@@ -2865,13 +2869,13 @@ button.swiper-pagination-bullet {
     height: auto;
   }
   .promo__btn-wrap {
-    -ms-flex-direction: column;
-        flex-direction: column;
-    -ms-flex-pack: start;
-        justify-content: flex-start;
+    -ms-flex-pack: justify;
+        justify-content: space-between;
     -ms-flex-align: center;
         align-items: center;
-    margin-top: 20px;
+  }
+  .promo__btn-wrap .btn {
+    width: 170px;
   }
   .promo__link {
     display: block;
@@ -2909,6 +2913,9 @@ button.swiper-pagination-bullet {
   .counter__field {
     -ms-flex-pack: center;
         justify-content: center;
+  }
+  .benefits__title {
+    bottom: -7px;
   }
   .benefits__block {
     padding-left: 0;
@@ -2957,8 +2964,8 @@ button.swiper-pagination-bullet {
   .test__block {
     padding-bottom: 70px;
   }
-  .test__title {
-    padding-bottom: 10px;
+  .test__title::after {
+    bottom: -7px;
   }
   .test__img {
     margin-left: auto;
@@ -2974,7 +2981,7 @@ button.swiper-pagination-bullet {
     width: 100%;
   }
   .montage::after {
-    top: 43%;
+    top: 43.2%;
   }
   .fitting__title::after,
   .tools__title::after {
@@ -3032,5 +3039,12 @@ button.swiper-pagination-bullet {
   }
   .montage__btn {
     width: 280px;
+  }
+  .promo__btn-wrap {
+    -ms-flex-direction: column;
+        flex-direction: column;
+    -ms-flex-pack: center;
+        justify-content: center;
+    margin-top: 20px;
   }
 }
