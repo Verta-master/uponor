@@ -2782,10 +2782,10 @@ button.swiper-pagination-bullet {
         align-items: flex-start;
   }
   .slider__item {
-    height: 510px;
+    height: 570px;
   }
   .slider {
-    min-height: 630px;
+    min-height: 690px;
   }
   .slider__img {
     position: static;
@@ -2976,10 +2976,10 @@ button.swiper-pagination-bullet {
     max-width: 240px;
   }
   .slider__item {
-    height: 580px;
+    height: 630px;
   }
   .slider {
-    min-height: 700px;
+    min-height: 750px;
   }
 }
 @media (max-width: 359px) {
@@ -2999,9 +2999,9 @@ button.swiper-pagination-bullet {
     width: 280px;
   }
   .slider__item {
-    height: 530px;
+    height: 600px;
   }
   .slider {
-    min-height: 650px;
+    min-height: 720px;
   }
 }
